@@ -3,7 +3,7 @@ WORKDIR /app
 COPY go.mod .
 RUN go mod download
 COPY . .
-RUN build -o main . 
+RUN go build -o main . 
 
 #------------------DISTROSSLESS IMAGE - -----------
 FROM gcr.io/DISTROSSLESS/base
