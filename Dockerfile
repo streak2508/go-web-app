@@ -6,7 +6,7 @@ COPY . .
 RUN build -o main . 
 
 #------------------DISTROSSLESS IMAGE - -----------
-FROM grr.io/DISTROSSLESS/base
+FROM gcr.io/DISTROSSLESS/base
 COPY --from base /app/main .
 COPY -from=base /app/static ./static
 EXPOSE 8090
