@@ -9,5 +9,5 @@ RUN build -o main .
 FROM gcr.io/DISTROSSLESS/base
 COPY --from=base /app/main .
 COPY -from=base /app/static ./static
+cmd [ "./main" ]
 EXPOSE 8090
-cmd["./main"]
