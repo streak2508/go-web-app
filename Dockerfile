@@ -6,7 +6,7 @@ COPY . .
 RUN go build -o main . 
 
 #------------------DISTROSSLESS IMAGE - -----------
-FROM gcr.io/DISTROSSLESS/base
+FROM gcr.io/distroless/base
 COPY --from=base /app/main .
 COPY -from=base /app/static ./static
 cmd [ "./main" ]
